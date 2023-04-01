@@ -1,0 +1,35 @@
+.contenedor-categorias {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 5px 5px;
+    font-family: sans-serif;
+}
+
+
+
+.categoria {
+    position: relative;
+    border: 1px solid #5a5a5a;
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: 10px;
+    background-color: #5a5a5a;
+    color: #fff;
+    font-size: 12px;
+    
+    
+}
+
+.categoria span{
+    font-size: 10px;
+    position: absolute;
+    right: -5px;
+    top: -7px;
+    border: 1px solid rgb(255, 35, 35);
+    border-radius: 50%;
+    padding: 2px 4px;
+    background-color: rgb(255, 35, 35);
+    color: #fff;
+    
+    cursor: pointer;
+}

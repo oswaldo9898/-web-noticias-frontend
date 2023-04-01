@@ -1,0 +1,105 @@
+.crear-publicacion {
+    min-width: 1124px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.crear-publicacion form{
+    margin: 40px;
+    border: 1px solid #000;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+form .informacion {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 60px;
+}
+
+form .informacion .informacio-publicacion{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 50%;
+}
+
+form .titular {
+    max-height: 50px;
+}
+
+form .informacion .informacio-publicacion p{
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(4, 49, 113);
+    letter-spacing: 2.0px;
+
+}
+
+.btn-categoria {
+    margin-left: 15px;
+    height: 35px;
+    width: 185px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+
+.caja-texto{
+    border-radius: 15px;
+    border: 1px solid #545353;
+    padding-left: 15px ;
+    margin-bottom: 15px;
+    min-height: 35px;
+}
+
+form textarea {
+    padding-left: 15px;
+    padding-top: 5px;
+    border-radius: 15px;
+    border: 1px solid #545353;
+}
+
+
+
+
+form .informacion .portada-publicacion{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    width: 40%;
+    margin-left: 50px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+form .informacion .portada-publicacion img{
+    height: 80%;
+    width: 75%;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+
+form .contenido {
+    margin: 0px 60px;
+}
+
+
+form .contenido textarea{
+    width: 820px;
+}

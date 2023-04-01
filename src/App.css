@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:wght@400;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center-flex {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+/* CONTAINER DRAG & DROP */
+.container-dnd{
+  width: 80%;
+  min-height: 40vh;
+  border-radius: 5px;
+  border: 3px dashed rgba(17, 16, 16, 0.322);
+
+  transition: all .3s ease;
+}
+.label-dnd{
+  text-align: center;
+  transition: all .3s ease;
+  font-weight: bold;
+  color: rgba(26, 25, 25, 0.322);
+  font-size: 1.1em;
+  transform: scale(.9);
+  z-index: -1;
+}
+
+.isDragging, .container-dnd:hover{
+  border-color: white;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.075);
+}
+.container-dnd:hover > .label-dnd,
+.isDragging > .label-dnd
+{
+ color:rgb(49, 47, 47);
+ transform: scale(1);
+}
+.container-dnd:active {
+  background-color: transparent;
+}
+
+
+/* CONTAINER DRAG & DROP WHIT IMAGE  */
+
+.container-principal-imagen{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.image-selected {
+  object-fit: contain;
+  vertical-align: top;
+  border-radius: 5px;
+  max-height: 200px;
+}
+
+/* BUTTONS IMAGE SELECTED */
+.container-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  min-height: 40px;
+}
+.container-buttons > button{
+  all: unset;
+  border: 1px solid white;
+  flex: 1;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all .2s ease-in-out;
+}
+
+.loading-label{
+  font-weight: bold;
+  animation: loading .5s infinite alternate; 
+}
+
+@keyframes loading {
+  0%{ opacity: 0;}
+  100%{ opacity: 1;}
+}
+
