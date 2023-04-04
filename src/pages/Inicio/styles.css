@@ -1,0 +1,27 @@
+.contenedor-principal {
+    min-width: 1124px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.noticias {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.noticias .noticia-tipo {
+    width: 100%;
+    text-align: end;
+    color: #373737;
+    font-weight: bold;
+}
+
+.contenedor-principal .separador-noticias {
+    width: 100%;
+    border: 1px solid #979696;
+    margin-bottom: 5px;
+}
+

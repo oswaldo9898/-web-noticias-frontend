@@ -15,9 +15,6 @@
 
 
 
-
-
-
 form .informacion {
     display: flex;
     flex-wrap: wrap;
@@ -31,16 +28,30 @@ form .informacion .informacio-publicacion{
     width: 50%;
 }
 
+.informacion-cabecera {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.select-tipo {
+    width: 150px;
+    font-size: 15px;
+    font-family: sans-serif;
+
+}
+
 form .titular {
     max-height: 50px;
 }
 
 form .informacion .informacio-publicacion p{
-    margin-bottom: 20px;
     font-family: sans-serif;
     font-weight: bold;
     color: rgb(4, 49, 113);
     letter-spacing: 2.0px;
+    font-size: 20px;
+    margin-right: 15px;
 
 }
 
@@ -67,6 +78,7 @@ form textarea {
     padding-top: 5px;
     border-radius: 15px;
     border: 1px solid #545353;
+    font-family: sans-serif;
 }
 
 

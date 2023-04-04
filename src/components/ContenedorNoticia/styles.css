@@ -1,0 +1,36 @@
+.noticia-card{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    margin-top: 0px;
+}
+
+.noticia-card .noticia-titular{
+    height: 100px;
+}
+
+.noticia-card figure{
+    text-align: center;
+}
+
+.noticia-card figure img {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+
+.noticia-card p{
+    margin: 5px;
+    font-size: 15px;
+    color: #515151;
+    text-align: justify;
+}
+
+.noticia-card span{
+    margin: 5px;
+    font-size: 13px;
+    color: #515151;
+
+    text-align: end;
+}

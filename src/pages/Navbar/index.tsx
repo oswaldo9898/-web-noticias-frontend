@@ -1,4 +1,5 @@
-import './styles.css'
+import { NavLink } from 'react-router-dom';
+import './styles.css';
 
 const Navbar = () => {
     return <>
@@ -8,7 +9,7 @@ const Navbar = () => {
             </div>
             <nav>
                 <ul>
-                    <li>Ultima hora</li>
+                    <li><NavLink to="/">Ultima hora</NavLink></li>
                     <li>Actualidad</li>
                     <li>Tendencias</li>
                     <li>Entretenimiento</li>
