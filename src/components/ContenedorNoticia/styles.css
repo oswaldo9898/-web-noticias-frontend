@@ -6,6 +6,18 @@
     margin-top: 0px;
 }
 
+.noticia-card a {
+    text-decoration: none;
+    color: #000000c0;
+    transition: all 300ms;
+}
+
+
+.noticia-card a:hover {
+    scale: 1.01;
+    color: #17194d;
+}
+
 .noticia-card .noticia-titular{
     height: 100px;
 }
