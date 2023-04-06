@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import { ImageListType } from "react-images-uploading";
 import axios from 'axios';
-import { BoxCategorias, DragAndDrop } from '../../components';
+import { BoxCategorias, DragAndDrop, EditorTexto } from '../../components';
 import './styles.css'
 import Select from 'react-select';
+
+import { useQuill } from 'react-quilljs';
+import 'quill/dist/quill.snow.css';
+import toolbar from './../../toolbar'
 
 
 const options: any[] = [
@@ -19,12 +23,20 @@ const CrearPublicaciones = () => {
   const [images, setImages] = useState<ImageListType>([]);
   const [categorias, setCategorias] = useState(todasCategorias);
   const [categoria, setCategoria] = useState('');
-  const [tipoNoticia, setTipoNoticia] = useState('');
+  const [tipoNoticia, setTipoNoticia] = useState({ value: '', label: 'Tipo' },);
+	const [content, setContent] = useState('');
+  
+  
+  const {quill, quillRef}= useQuill({
+    modules: {
+      toolbar: toolbar
+    }
+  })
+
 
 
   const handleChange = (selectedOption:any) => {
-    setTipoNoticia(selectedOption.value);    
-    console.log(selectedOption.value)
+    setTipoNoticia(selectedOption);
   }
 
   
@@ -55,8 +67,8 @@ const CrearPublicaciones = () => {
     let titular = e.target.titular.value;
     let categoria = categorias;
     let resumen = e.target.resumen.value;
-    let contenido = e.target.contenido.value;
-    let tipo = tipoNoticia;
+    let contenido = JSON.stringify(quill.getContents());
+    let tipo = tipoNoticia.value;
 
     if (titular && categoria[0] && resumen && contenido && tipo && images[0]){
       const fd = new FormData();
@@ -122,7 +134,9 @@ const CrearPublicaciones = () => {
         </div>
 
         <div className="contenido">
-          <textarea id="contenido" placeholder="Contenido" rows={10}></textarea>
+          {/* <textarea id="contenido" placeholder="Contenido" rows={10}></textarea> */}
+          {/* <EditorTexto placeholder="Contenido" setContent={setContent} /> */}
+          <div ref={quillRef}></div>
         </div>
         <button >Crear publicación</button>
       </form>

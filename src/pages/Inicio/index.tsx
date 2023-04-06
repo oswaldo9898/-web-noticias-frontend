@@ -29,24 +29,24 @@ const Inicio = () => {
     .then(res => {
       setNoticiasInternacional(res.data.payload);
     });
-  },[])
- 
+  },[]);
+
 
   return (
     <>
     <div className='contenedor-principal'>
       <div className='noticias'>
-        <p className='noticia-tipo'>Locales</p>
+        <p className='noticia-tipo'>LOCAL</p>
         <span className='separador-noticias'></span>
         <ContenedorNoticia noticias={noticiasLocal} />
       </div>
       <div className='noticias'>
-        <p className='noticia-tipo'>Nacionales</p>
+        <p className='noticia-tipo'>NACIONAL</p>
         <span className='separador-noticias'></span>
         <ContenedorNoticia noticias={noticiasNacional} />
       </div>
       <div className='noticias'>
-        <p className='noticia-tipo'>Internacionales</p>
+        <p className='noticia-tipo'>INTERNACIONAL</p>
         <span className='separador-noticias'></span>
         <ContenedorNoticia noticias={noticiasInternacional} />
       </div>
