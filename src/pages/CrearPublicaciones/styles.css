@@ -2,6 +2,8 @@
     min-width: 1124px;
     display: flex;
     justify-content: center;
+    height: auto;
+
 }
 
 
@@ -96,7 +98,6 @@ form .informacion .portada-publicacion{
 }
 
 form .informacion .portada-publicacion img{
-    height: 80%;
     width: 75%;
     border: 1px solid #000;
     margin-bottom: 15px;
@@ -109,9 +110,9 @@ form .informacion .portada-publicacion img{
 
 form .contenido {
     margin: 0px 60px;
-}
-
-
-form .contenido textarea{
-    width: 820px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    height: 200px;
+    max-height: 200px;
 }

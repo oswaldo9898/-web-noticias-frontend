@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     margin-right: 20px;
-    margin-top: 0px;
+    margin-top: 30px;
 }
 
 .noticia-card a {
@@ -20,6 +20,9 @@
 
 .noticia-card .noticia-titular{
     height: 80px;
+    max-height: 80px;
+    font-size: auto;
+    overflow: hidden;
 }
 
 .noticia-card figure{

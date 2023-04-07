@@ -93,6 +93,8 @@ const CrearPublicaciones = () => {
           input => (input.value = "")
         );
 
+        quill.setContents('')
+
       });
 
     }else{
@@ -134,8 +136,6 @@ const CrearPublicaciones = () => {
         </div>
 
         <div className="contenido">
-          {/* <textarea id="contenido" placeholder="Contenido" rows={10}></textarea> */}
-          {/* <EditorTexto placeholder="Contenido" setContent={setContent} /> */}
           <div ref={quillRef}></div>
         </div>
         <button >Crear publicación</button>

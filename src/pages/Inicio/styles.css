@@ -1,5 +1,6 @@
 .contenedor-principal {
     min-width: 1124px;
+    max-width: 1124px;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -23,5 +24,24 @@
     width: 100%;
     border: 1px solid #979696;
     margin-bottom: 5px;
+}
+
+.noticias #ver-mas {
+    margin-top: 10PX;
+    min-width: 1124px;
+    text-decoration: none;
+    text-align: center;
+    color: #17194d;
+    font-weight: bold;
+    padding: 5px 0;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    transition: all 300ms;
+}
+
+.noticias #ver-mas:hover {
+    border: 1px solid #17194d;
+    background-color: #17194dd0;
+    color: #fff;
 }
 

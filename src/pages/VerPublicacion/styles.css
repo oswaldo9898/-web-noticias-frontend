@@ -30,8 +30,19 @@
     text-align: center;
 }
 
+.contenedor-noticia .portada img{
+    width: 1124px;
+    object-fit: cover;
+}
+
 .contenedor-noticia .contenido{
     margin-top: 20px;
     text-align: justify;
+}
+
+.contenedor-noticia .contenido article{
+    margin-top: 20px;
+    text-align: justify;
     font-size: 20px;
+    border: none;
 }
