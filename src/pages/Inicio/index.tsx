@@ -38,19 +38,19 @@ const Inicio = () => {
         <p className='noticia-tipo'>LOCAL</p>
         <span className='separador-noticias'></span>
         <ContenedorNoticia noticias={noticiasLocal} />
-        <NavLink to={`/noticia/local`} id='ver-mas'><span>VER MÁS...</span></NavLink>
+        <NavLink to={`/noticias/local`} id='ver-mas'><span>VER MÁS...</span></NavLink>
       </div>
       <div className='noticias'>
         <p className='noticia-tipo'>NACIONAL</p>
         <span className='separador-noticias'></span>
         <ContenedorNoticia noticias={noticiasNacional} />
-        <NavLink to={`/noticia/nacional`} id='ver-mas'><span>VER MÁS...</span></NavLink>
+        <NavLink to={`/noticias/nacional`} id='ver-mas'><span>VER MÁS...</span></NavLink>
       </div>
       <div className='noticias'>
         <p className='noticia-tipo'>INTERNACIONAL</p>
         <span className='separador-noticias'></span>
         <ContenedorNoticia noticias={noticiasInternacional} />
-        <NavLink to={`/noticia/internacional`} id='ver-mas'><span>VER MÁS...</span></NavLink>
+        <NavLink to={`/noticias/internacional`} id='ver-mas'><span>VER MÁS...</span></NavLink>
       </div>
     </div>
     </>
