@@ -9,7 +9,7 @@
 .noticia-card a {
     text-decoration: none;
     color: #000000c0;
-    transition: all 300ms;
+    overflow: hidden;
 }
 
 
@@ -21,7 +21,6 @@
 .noticia-card .noticia-titular{
     height: 80px;
     max-height: 80px;
-    font-size: auto;
     overflow: hidden;
 }
 

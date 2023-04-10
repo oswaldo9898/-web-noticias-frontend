@@ -17,7 +17,6 @@ const VerPublicacionesCategoria = () => {
       axios.get(`http://localhost:8080/api/publicaciones/${categoria}?limit=${9}&page=${pageSelect}`, {})
       .then(res => {
         setNoticias(res.data.payload.docs);
-        console.log(res.data.payload);
         setPageCount(res.data.payload.totalPages);
         setTotalDocs(res.data.payload.totalDocs)
       });
@@ -26,23 +25,18 @@ const VerPublicacionesCategoria = () => {
 
 
     const handlePageClick = (event:any) => {
-      console.log(event.selected + 1 )
       const pageClick = event.selected + 1
       setPageSelect(pageClick);
-      
-      // const newOffset = (event.selected * 9) % items.length;
-      // console.log(
-      //   `User requested page number ${event.selected}, which is offset ${newOffset}`
-      // );
-      // setItemOffset(newOffset);
     };
 
 
   return (
     <>
     <div className='contenedor-principal'>
-      <div className='noticias'> 
+      <div className='noticias-categoria'> 
+      <div className='noticias'>
         <ContenedorNoticia noticias={noticias} />
+      </div>
         <ReactPaginate
           breakLabel="..."
           nextLabel="Siguiente >"

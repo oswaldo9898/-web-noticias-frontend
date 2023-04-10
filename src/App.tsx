@@ -1,5 +1,5 @@
 import './App.css';
-import { CrearPublicaciones, Inicio, Navbar, VerPublicacion, VerPublicacionesCategoria } from './pages';
+import { CrearPublicaciones, Footer, Inicio, Navbar, VerPublicacion, VerPublicacionesCategoria } from './pages';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -15,6 +15,7 @@ function App() {
           <Route path="/noticia/:id" element={<VerPublicacion />}></Route>
           <Route path="/crear-publicacion" element={<CrearPublicaciones />}></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
     // <div className="App">
