@@ -1,4 +1,5 @@
 import './App.css';
+import { PublicacionesManager } from './components';
 import { CrearPublicaciones, Dashboard, Footer, Inicio, Login, Navbar, VerPublicacion, VerPublicacionesCategoria } from './pages';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Inicio />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/dashboard/publicaciones-manager" element={<PublicacionesManager />}></Route>
           <Route path="/noticias/:categoria" element={<VerPublicacionesCategoria />}></Route>
           <Route path="/noticia/:id" element={<VerPublicacion />}></Route>
           <Route path="/crear-publicacion" element={<CrearPublicaciones />}></Route>
