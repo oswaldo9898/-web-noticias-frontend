@@ -9,7 +9,6 @@ const VerPublicacionesCategoria = () => {
     const { categoria } = useParams();
     const [noticias, setNoticias] = useState([]);
     const [pageCount, setPageCount] = useState(0);
-    const [totalDocs, setTotalDocs] = useState(0);
     const [pageSelect, setPageSelect] = useState(1);
 
 
@@ -18,7 +17,6 @@ const VerPublicacionesCategoria = () => {
       .then(res => {
         setNoticias(res.data.payload.docs);
         setPageCount(res.data.payload.totalPages);
-        setTotalDocs(res.data.payload.totalDocs)
       });
 
     }, [pageSelect]);

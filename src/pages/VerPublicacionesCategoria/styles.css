@@ -4,7 +4,7 @@
 }
 
 .pagination {
-    padding-top: 1rem;
+    padding-top: 1rem !important;
     text-align: center;
 }
 
@@ -14,46 +14,47 @@
 }
 
 .pagination li {
-    display: inline-block;
+    display: inline-block !important;
 }
 
 .pagination .selected a{
-    background-color: #17194d;;
-    color: #fff;
+    background-color: #17194d !important;
+    color: #fff !important;
 }
 
 .pagination .disabled a{
-    background-color: #c2c2c2;;
-    color: #3f3f3f;
+    background-color: #c2c2c2 !important;
+    color: #3f3f3f !important;
 }
 
 .pagination li > a {
-    padding: 0.5rem;
-    margin: 1px;
+    padding: 0.5rem !important;
+    margin: 1px !important;
     display: inline-block;
-    cursor: pointer;
-    background-color: #fff;
-    border: 1px solid #d8eef5;
-    border-radius: 2px;
-    min-width: 1rem;
+    cursor: pointer !important;
+    background-color: #fff !important;
+    border: 1px solid #d8eef5 !important;
+    border-radius: 2px !important;
+    min-width: 1rem !important;
+    text-decoration: none !important;
 }
 
 .pagination li > a:focus {
-    outline: none;
+    outline: none !important;
 }
 
 
 
 .issuesPagination .selected a {
-    box-shadow: 0 0 2px #1b7d9e;
-    background-color: #f3fcff;
+    box-shadow: 0 0 2px #1b7d9e !important;
+    background-color: #f3fcff !important;
 }
 
 .issuesPagination .disabled > a {
-    color: #ccc;
-    background-color: #f8f8f8;
-    border-color: #eee;
-    cursor: default;
+    color: #ccc !important;
+    background-color: #f8f8f8 !important;
+    border-color: #eee !important;
+    cursor: none !important;
 }
 
 .issuesPagination .disabled > a:hover {

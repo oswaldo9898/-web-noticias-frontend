@@ -1,0 +1,4 @@
+.dashboard-main .tabla{
+    height: 100vh;
+    overflow: scroll;
+}
