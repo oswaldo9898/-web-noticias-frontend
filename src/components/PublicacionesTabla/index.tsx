@@ -4,7 +4,8 @@ import Noticia from '../../interfaces/noticia';
 import moment from "moment";
 import './styles.css';
 import ReactPaginate from "react-paginate";
-
+import { AiOutlinePlus, AiFillEdit} from 'react-icons/ai';
+import {NavLink} from "react-router-dom";
 
 const PublicacionesTabla = () => {
   
@@ -30,9 +31,13 @@ const PublicacionesTabla = () => {
     <>
     <div className="container-sm">
       <div className="col ">
-        <div className="col mt-4 mb-3">
-          <h3>Publicaciones</h3>
-        </div>
+        {/* <div className="d-flex mt-4 mb-3 ">
+          <h3 className="col-8">Publicaciones</h3>
+          <NavLink to="/dashboard/publicaciones-manager/crear-publicacion" >
+            <button className="btn btn-primary btn-sm fs-9 text" type="button"><AiOutlinePlus /> Nueva Publicación</button>
+          </NavLink>
+          
+        </div> */}
         <div className="col-11">
         <table className="table">
         <thead>
@@ -53,7 +58,11 @@ const PublicacionesTabla = () => {
             <td><p>{noticia.tipo?.toUpperCase()}</p></td>
             <td>{moment(noticia.createdAt).format("DD/MM/YYYY")}</td>
             <td>
-              <button type="button" className="btn btn-success btn-sm">Editar</button>
+              <div className=" d-flex justify-content-center">
+              <NavLink to={`/dashboard/publicaciones-manager/editar-publicacion/${noticia._id}`} >
+                <button type="button" className="btn btn-secondary btn-sm fs-9 text" title="Editar Publicación"><AiFillEdit /></button>
+              </NavLink>
+              </div>
             </td>
           </tr>
             </>

@@ -1,16 +1,17 @@
 .crear-publicacion {
-    min-width: 1124px;
     display: flex;
     justify-content: center;
-    height: auto;
+    height: 100vh;
+    width: 100vw;
+    overflow: scroll;
 
 }
 
 
 .crear-publicacion form{
-    margin: 40px;
-    border: 1px solid #000;
-    width: 1000px;
+    margin: 20px 40px;
+    /* border: 1px solid #000; */
+    width: 90%;
     display: flex;
     flex-direction: column;
 }
@@ -20,7 +21,7 @@
 form .informacion {
     display: flex;
     flex-wrap: wrap;
-    margin: 30px 60px;
+    margin: 30px 20px;
 }
 
 form .informacion .informacio-publicacion{
@@ -33,8 +34,10 @@ form .informacion .informacio-publicacion{
 .informacion-cabecera {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 10px !important;
 }
+
 
 .select-tipo {
     width: 150px;
@@ -45,16 +48,16 @@ form .informacion .informacio-publicacion{
 
 form .titular {
     max-height: 50px;
+    font-size: 15px;
 }
 
 form .informacion .informacio-publicacion p{
     font-family: sans-serif;
     font-weight: bold;
     color: rgb(4, 49, 113);
-    letter-spacing: 2.0px;
+    letter-spacing: 1.5px;
     font-size: 20px;
     margin-right: 15px;
-
 }
 
 .btn-categoria {
@@ -63,6 +66,8 @@ form .informacion .informacio-publicacion p{
     width: 185px;
     border-radius: 15px;
     cursor: pointer;
+    font-size: 15px;
+
 }
 
 
@@ -73,6 +78,8 @@ form .informacion .informacio-publicacion p{
     padding-left: 15px ;
     margin-bottom: 15px;
     min-height: 35px;
+    font-size: 15px;
+
 }
 
 form textarea {
@@ -81,6 +88,7 @@ form textarea {
     border-radius: 15px;
     border: 1px solid #545353;
     font-family: sans-serif;
+    font-size: 15px;
 }
 
 
@@ -109,7 +117,7 @@ form .informacion .portada-publicacion img{
 
 
 form .contenido {
-    margin: 0px 60px;
+    margin: 0px 30px;
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;

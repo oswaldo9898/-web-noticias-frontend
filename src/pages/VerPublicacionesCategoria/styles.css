@@ -37,6 +37,8 @@
     border-radius: 2px !important;
     min-width: 1rem !important;
     text-decoration: none !important;
+    font-size: 15px;
+
 }
 
 .pagination li > a:focus {
