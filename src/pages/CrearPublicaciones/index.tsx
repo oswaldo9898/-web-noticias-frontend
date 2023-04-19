@@ -29,6 +29,12 @@ const CrearPublicaciones = () => {
   const [categoria, setCategoria] = useState('');
   const [tipoNoticia, setTipoNoticia] = useState({ value: '', label: 'Tipo' },);
   const [noticia, setNoticia] = useState(publicacion);
+
+  const [datos, setDatos] = useState({
+    titular: '',
+    resumen: ''
+  })
+
   
   
   const {quill, quillRef}= useQuill({
@@ -37,15 +43,39 @@ const CrearPublicaciones = () => {
     }
   });
 
+  const handleInputChange = (event:any) => {
+    // console.log(event.target.name)
+    // console.log(event.target.value)
+    setDatos({
+        ...datos,
+        [event.target.name] : event.target.value
+    })
+}
+
   useEffect(()=>{
     if(params.id){
       axios.get(`http://localhost:8080/api/publicaciones/noticia/${params.id}`, {})
       .then(res => {
+        setDatos({
+          ...datos,
+          ['titular']: res.data.payload.titular 
+        });
+        setDatos({
+          ...datos,
+          ['resumen']: res.data.payload.resumen 
+        });
         setNoticia(res.data.payload);
+
+        const categori = res.data.payload.categorias
+        console.log(categori)
+        categori.map( (cat:any) => setCategorias([...categorias, cat ]))
+
+        ;
+        console.log(categorias)
         quill.setContents(JSON.parse(res.data.payload.contenido!) || '')
       });
     }
-  }, [])
+  }, [quill])
 
 
 
@@ -138,13 +168,35 @@ const CrearPublicaciones = () => {
               />
               </div>
               
-              <textarea value={params.id ? noticia.titular: ''} id="titular" className='caja-texto titular' placeholder="Titular de la noticia"></textarea>
+              <textarea
+                value={datos.titular} 
+                id="titular" 
+                name='titular'
+                className='caja-texto titular' 
+                placeholder="Titular de la noticia"
+                onChange={handleInputChange}
+              ></textarea>
               <div>
-                <input value={params.id ? noticia.categorias : categoria} type="text" id="categoria" className='caja-texto' placeholder="Categoria" onChange={(e) => setCategoria( e.target.value)}/>
-                <button className='btn-categoria' onClick={agregarCategoria}>Agregar</button>
+                <input 
+                  value={params.id ? noticia.categorias : categoria} 
+                  type="text" 
+                  id="categoria" 
+                  className='caja-texto' 
+                  placeholder="Categoria" 
+                  onChange={(e) => setCategoria( e.target.value)}
+                />
+                <button className='btn-categoria' onClick={agregarCategoria} >Agregar</button>
                 <BoxCategorias categorias={categorias} eliminar={eliminarCategoria} />
               </div>
-              <textarea value={params.id ? noticia.resumen : ''} id="resumen" placeholder="Resumen" className='caja-texto titular' rows={5}></textarea>
+              <textarea
+                value={datos.resumen} 
+                id="resumen" 
+                name='resumen'
+                placeholder="Resumen" 
+                onChange={handleInputChange}
+                className='caja-texto titular' 
+                rows={5}
+              ></textarea>
             </div>
             <div className="portada-publicacion">
               <DragAndDrop setImages={setImages} images={images}/>
